@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.cotainer{
+    width: 50%;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    
+
+}
+.col{
+    display: flex;
+
+}
+.pricingTable{
+    height: 100%;
+    width: 430px;
+    margin-top: 45px;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+}
+.pricingTable .pricingHead ::after{
+    content: " ";
+    width: 40px;
+    height: 25%;
+    background-color: #EF476F;
+    position: absolute;
+    top: 6px;
+    right: 1px;
+    bottom: 10px;
+    z-index: 2;
+    transform: skewY(40deg) translateY(25px);
+    transition: all 0.4s ease-in-out 0s
+}
+
+.pricingTable .title{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: uppercase;
+    background-color: #EF476F;
+    padding: 20px 0 0;
+    margin: 0 25px 0 0;
+    color: black;
+    transition:all 0.4s ease-in-out 0s ;
+}
+
+.pricingTable .value {
+    display: block; 
+    font-size: 35px;
+    font-weight: 600;
+    background-color: #EF476F;
+    color: black;
+    padding: 6px 0 12px ;
+    margin: 0 35 0 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+.pricingTable:hover .value::after,
+.contents:hover .link::after,
+.pricingTable:hover .pricingHead:after,
+.pricingTable:hover .title,
+.pricingTable:hover .value
+{ 
+    background-color: #06D6A0;
+}
+
+.pricingTable .contents ul{
+    list-style:  none;
+    padding: 0;
+    margin: 0 30px;
+    background-color: white;
+}
+
+.pricingTable .month {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pricingTable:hover .title,
+.pricingTable:hover .value{
+    color: #fff;
+    background-color: #06D6A0;
+}
+
+.pricingTable .contents:after{
+    content: "";
+    width: 35px;
+    height: 80%;
+    background: #eeeded;
+    box-shadow: 9px 10px 20px #fefdfd;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 1;
+    transform: skewY(-40deg) translateY(-20px);
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+.pricingTable .contents ul li{
+    display: block;
+    font-size: 15px;
+    color: #333;
+    line-height: 23px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.pricingTable .link{
+    background: #fff;
+    padding: 20px 0;
+    margin-right: 35px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+
+.pricingTable .link a{
+    display: inline-block;
+    padding: 9px 20px;
+    font-weight: 700;
+    color: #EF476F;
+    text-transform: uppercase;
+    border: 1px solid #EF476F;
+    background: #fff;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+
+.pricingTable:hover .link a{
+    color: #fff;
+    background: #06D6A0;
+    border: 1px solid #06D6A0;
+}
+@media only screen and (max-width: 600px) {
+    .pricingTable{
+     width: 100%;
+   }
+}
